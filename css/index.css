@@ -1,0 +1,84 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.microma {
+    font-family: 'Michroma', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    min-height: 5vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    background-color: #97ce4c;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    justify-content: space-around;
+}
+
+nav .logo,
+nav .nav-options {
+    padding: 0 25px;
+    border: 1px solid black;
+    flex-basis: 40%;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.nav-options {
+    display: flex;
+    align-items: center;
+}
+
+.nav-options ul {
+    list-style: none;
+    flex: 1;
+    display: flex;
+}
+
+.nav-options ul li {
+    flex: 1;
+}
+
+.search-group {
+    flex: 2;
+    display: flex;
+    align-items: stretch;
+    border: 1px solid green;
+    height: 75%;
+}
+
+.input-group-prepend {
+    flex: 1;
+    border: 1px solid black;
+}
+
+.search-group input {
+    flex: 2;
+}
+
+.input-group-append {
+    flex: 1;
+}
