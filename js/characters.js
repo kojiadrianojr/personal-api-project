@@ -1,4 +1,4 @@
-const characters = () => {
+const characters = (() => {
     function all() {
         return rAmAPI
             .get('character')
@@ -20,4 +20,4 @@ const characters = () => {
         get,
         getMul,
     }
-}
+})();

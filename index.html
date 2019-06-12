@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/animations.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
-    <link id="thisLink" rel="icon" href="./images/icons/rick-and-morty-icon-png-26.png" type="images/gif" sizes="16x16">
+    <link id="thisLink" rel="icon" href="./images/icons/kisspng-morty-smith-rick-sanchez-drawing-fan-art-cartoon-rick-and-morty-5ac220ac73e954.5876699115226717884748.png" type="images/gif" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Rick and Morty</title>
@@ -17,24 +18,40 @@
 <body>
     <nav>
         <div class="logo">
-            <a href="#"><img src="https://www.firstcomicsnews.com/wp-content/uploads/2017/09/Rick-and-Morty-logo-600x257.png"></a>
+            <img src="https://www.firstcomicsnews.com/wp-content/uploads/2017/09/Rick-and-Morty-logo-600x257.png">
         </div>
-        <div class="nav-options">
+        <div class="nav-options hide-me">
+            <ul>
+                <li>Characters</li>
+                <li>Location</li>
+                <li>Episodes</li>
+            </ul>
             <div class="search-group">
-                <div class="input-group-prepend"><i class="fa fa-search	
-                    "></i></div>
-                <input class="form-control search-field" type="text" placeholder="I am looking for..">
-                <div class="input-group-append">
-                    <button>Search</button>
+                <div class="input-group">
+                    <i class="fa fa-search"></i>
                 </div>
             </div>
-            <ul>
-                <li><a href="#">Characters</a></li>
-                <li><a href="#">Location</a></li>
-                <li><a href="#">Episodes</a></li>
-            </ul>
         </div>
     </nav>
+    <div id="wrap" class="hide-by-op animate-ss">
+        <form action="" autocomplete="on">
+            <input id="search" name="search" type="text" placeholder="What are you finding?" autocomplete="off">
+            <input id="search_submit" type="submit">
+        </form>
+    </div>
+    <div id="first-cont" class="container">
+        <div class="tv">
+            <video controls>
+                <source src="/images/video/Rick and Morty Season 4 Release Date  Rick and Morty  Adult Swim.mp4">
+            </video>
+        </div>
+    </div>
+    <div id="second-cont" class="container">
+
+
+    </div>
+
+
 
 
 

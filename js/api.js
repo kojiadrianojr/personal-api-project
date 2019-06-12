@@ -9,12 +9,19 @@ const rAmAPI = (function() {
         }
     }
 
+    const check = () => {
+        return fetch(`${rAmURL}`)
+            .then(res => res.json())
+            .then(console.log)
+    }
+
     const get = (path) => {
         return fetch(`${rAmURL}/${path}`)
             .then(handleErr)
             .then(res => res.json());
     }
     return {
+        check,
         get,
     }
 })();

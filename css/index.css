@@ -1,5 +1,6 @@
 html {
     font-size: 14px;
+    font-family: 'Michroma', sans-serif;
 }
 
 body {
@@ -21,26 +22,34 @@ a {
 }
 
 nav {
+    color: white;
+    position: fixed;
     min-height: 5vh;
     height: auto;
     width: 100%;
     display: flex;
-    background-color: #97ce4c;
+    background-color: transparent;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.bg-green {
+    background-color: rgba(151, 206, 76, 0.8);
+    transition: 250ms linear;
+}
+
+.box-shadow-v1 {
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     -moz-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow: 3px 3px 5px 6px #ccc;
-    justify-content: space-around;
 }
 
 nav .logo,
-nav .nav-options {
-    padding: 0 25px;
-    border: 1px solid black;
-    flex-basis: 40%;
-}
+nav .nav-options {}
 
 .logo {
     height: 50px;
+    cursor: pointer;
 }
 
 .logo img {
@@ -48,37 +57,128 @@ nav .nav-options {
 }
 
 .nav-options {
+    flex-basis: 50%;
     display: flex;
     align-items: center;
 }
 
 .nav-options ul {
+    height: 100%;
     list-style: none;
-    flex: 1;
+    flex: 2;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 }
 
 .nav-options ul li {
-    flex: 1;
+    flex-basis: 25%;
+    margin: 5px;
+    word-spacing: 1px;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+}
+
+.nav-options ul li:hover {
+    color: white;
+}
+
+.nav-options ul li {
+    color: rgb(192, 183, 183);
+}
+
+.scrolledUL {
+    color: white!important;
+}
+
+.scrolledUL:hover {
+    color: black!important;
 }
 
 .search-group {
-    flex: 2;
+    flex-basis: 25%;
     display: flex;
     align-items: stretch;
-    border: 1px solid green;
-    height: 75%;
 }
 
-.input-group-prepend {
+.input-group {
+    display: flex;
     flex: 1;
-    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: stretch;
 }
 
-.search-group input {
-    flex: 2;
+.input-group i:hover {
+    color: white;
+}
+
+.input-group i {
+    color: rgb(192, 183, 183);
+    font-size: 25px;
+    margin: auto;
+    flex: 1;
+    margin: 10px;
+}
+
+.search-group input:focus,
+.input-group-append:focus {
+    outline: none;
 }
 
 .input-group-append {
     flex: 1;
+    align-items: center;
+    border-radius: 0px 42px 42px 0px;
+    -moz-border-radius: 0px 42px 42px 0px;
+    -webkit-border-radius: 0px 42px 42px 0px;
+}
+
+.hide-me {
+    display: none;
+}
+
+.hide-by-op {
+    opacity: 0;
+    margin-right: 500px;
+}
+
+.hide-by-fly {
+    margin-top: 50px;
+}
+
+.container {
+    height: 100vh;
+}
+
+// first container {}
+#first-cont {
+    background-image: url(../images/wallpapers/643524_rick-and-morty-wallpaper-1920x1080.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+video {
+    width: 500px;
+    height: auto;
+    border: 1px solid rgb(170, 29, 29);
+}
+
+video:focus {
+    outline: 0;
+}
+
+.tv {
+    display: grid;
+    border: 2px solid yellow;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    margin: 50px 100px;
+    z-index: 0;
 }
