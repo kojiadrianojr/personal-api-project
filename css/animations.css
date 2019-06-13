@@ -88,5 +88,5 @@ input[type="submit"]:focus {
 }
 
 .animate-ss {
-    transition: opacity 1s, margin 1s;
+    transition: opacity 2s, margin 1s;
 }

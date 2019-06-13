@@ -21,14 +21,34 @@ $(document).ready(function() {
         e.preventDefault();
         $('#wrap').toggleClass('hide-by-op').toggleClass('hide-by-fly');
     })
+
+    $('.parallax-window').parallax({ imageSrc: '../images/wallpapers/751400.png' });
+    $('.parallax-window-2').parallax({
+        imageSrc: '../images/wallpapers/401073.jpg',
+        positionY: 'top',
+
+    });
+
 });
 
 $(document).scroll(function() {
     var $nav = $('nav');
-    var $navA = $('.nav-options ul li');
+    var $navA = $('.nav-options ul li a');
     var $i = $('.input-group i');
 
     $nav.toggleClass('bg-green', $(this).scrollTop() > $nav.height());
     $i.toggleClass('scrolledUL', $(this).scrollTop() > $nav.height());
     $navA.toggleClass('scrolledUL', $(this).scrollTop() > $nav.height());
+})
+
+$(document).on('click', '#char-info', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $('#char-infobox').removeClass('hide-me');
+})
+
+$(document).on('click', '#char-info-close', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $('#char-infobox').addClass('hide-me');
 })

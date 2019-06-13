@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
 html {
     font-size: 14px;
     font-family: 'Michroma', sans-serif;
@@ -12,8 +16,20 @@ div {
     box-sizing: border-box;
 }
 
+.cursive {
+    font-family: 'Bungee Inline', cursive;
+}
+
+.dancing {
+    font-family: 'Dancing Script', cursive;
+}
+
 .microma {
     font-family: 'Michroma', sans-serif;
+}
+
+.ubuntu {
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 a {
@@ -82,11 +98,11 @@ nav .nav-options {}
     cursor: pointer;
 }
 
-.nav-options ul li:hover {
+.nav-options ul li a:hover {
     color: white;
 }
 
-.nav-options ul li {
+.nav-options ul li a {
     color: rgb(192, 183, 183);
 }
 
@@ -151,34 +167,155 @@ nav .nav-options {}
 }
 
 .container {
-    height: 100vh;
+    height: 120vh;
 }
 
-// first container {}
+// first container { background-image: url(../images/wallpapers/751400.png);}
 #first-cont {
-    background-image: url(../images/wallpapers/643524_rick-and-morty-wallpaper-1920x1080.jpg);
+    display: flex;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
 }
 
-video {
-    width: 500px;
-    height: auto;
-    border: 1px solid rgb(170, 29, 29);
-}
-
-video:focus {
-    outline: 0;
-}
-
-.tv {
+.grid-container {
+    margin: auto 50px;
     display: grid;
-    border: 2px solid yellow;
+    grid-template-columns: 1fr 1fr;
+    max-grid-template-rows: 470px;
+    grid-template-areas: "left right";
+    background-color: transparent;
     height: 50%;
-    position: absolute;
-    bottom: 0;
-    margin: 50px 100px;
-    z-index: 0;
+    width: 100%;
+    grid-gap: 25%;
+}
+
+.left {
+    grid-area: left;
+    font-size: 3em;
+    overflow-y: scroll;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    -webkit-box-shadow: -9px 9px 21px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -9px 9px 21px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: -9px 9px 21px -8px rgba(0, 0, 0, 0.75);
+    border-radius: 40px 10px 10px 40px;
+    -moz-border-radius: 40px 10px 10px 40px;
+    -webkit-border-radius: 40px 10px 10px 40px;
+    border: 0px solid #000000;
+}
+
+.left video {
+    width: 100%;
+}
+
+.left::-webkit-scrollbar {
+    display: none;
+}
+
+.right {
+    text-align: center;
+    grid-area: right;
+    -webkit-box-shadow: 9px 9px 21px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px 9px 21px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 9px 9px 21px -8px rgba(0, 0, 0, 0.75);
+    border-radius: 10px 40px 40px 10px;
+    border: 0px solid #000000;
+}
+
+.left:hover,
+.right:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.right-char-cont img {
+    border-radius: 50%;
+}
+
+.right p.cursive {
+    font-size: 2em;
+}
+
+#char-info {
+    cursor: pointer;
+}
+
+#char-infobox {
+    height: 120vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#char-info-area {
+    margin: 100px auto;
+    width: 35%;
+    height: 50%;
+    background-image: url(../images/wallpapers/UvI5ogH.png);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+    justify-content: space-evenly;
+    border: 0px solid #000000;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 4px 25px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 25px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 25px 3px rgba(0, 0, 0, 0.75);
+    border-radius: 70px 70px 70px 70px;
+    -moz-border-radius: 70px 70px 70px 70px;
+    -webkit-border-radius: 70px 70px 70px 70px;
+}
+
+#char-info-close {
+    border-radius: 25%;
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+#char-info-close:hover {
+    background-color: white;
+}
+
+#char-info-close:focus {
+    outline: none;
+}
+
+#info-here {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Ubuntu Condensed', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 110%;
+}
+
+#info-here img {
+    margin: 10px;
+    border-radius: 10px 10px 10px 84px;
+    -moz-border-radius: 10px 10px 10px 84px;
+    -webkit-border-radius: 10px 10px 10px 84px;
+    border: 1px solid white;
+}
+
+#info-here div {
+    letter-spacing: 5px;
+    font-size: 1.3em;
+    color: white;
+}
+
+//second container {}
+.characters {
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

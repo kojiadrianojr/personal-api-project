@@ -4,7 +4,6 @@ const characters = (() => {
             .get('character')
             .then(chars => chars.results)
             .catch(err => console.log(err))
-
     }
 
     function get(character) {
