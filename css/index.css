@@ -308,19 +308,16 @@ nav .nav-options {}
 
 #more-char:hover {
     border-radius: 0px 0px 20px 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: -1px 3px 61px 7px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 4px 7px 4px rgba(0, 0, 0, 0.75);
 }
 
 //second container {}
 #characters {
-    margin-top: 50px;
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr 2fr;
     padding: 20px;
     grid-template-areas: "sidebar search" "main main";
-    grid-gap: 25px;
 }
 
 .char-cont {

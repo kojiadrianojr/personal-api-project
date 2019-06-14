@@ -6,6 +6,9 @@ const apis = {
 };
 
 var randomN;
+var currPage;
+
+
 const randomChar = () => {
     randomN = Math.floor(Math.random() * 394 - 1) + 1;
     return randomN;
@@ -45,11 +48,29 @@ $('#more-char').click(function(e) {
     })();
 })
 
+const renderChar = () => {
+    return characters.all()
+        .then(res => console.log(res))
+}
 
-
+const displayAll = (() => {
+    characters.getPageTotal()
+        .then(count => {
+            for (i = 1; i <= count; i++) {
+                characters.getPage(i)
+                    .then(page => page.results)
+                    .then(res => res.map(char => {
+                        $('.char-cont').append(`
+                        <h1>${char.name}</h1>
+                        `)
+                    }))
+            }
+        })
+})();
 
 
 /*
+
 quotes.get().then(res => {
     $('.left').append(`
         <p class="dancing">"${res.data}"</p>

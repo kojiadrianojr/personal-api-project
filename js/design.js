@@ -33,6 +33,19 @@ $(document).ready(function() {
         imageSrc: '../images/wallpapers/rick-and-morty-hd-jh.jpg',
     })
 
+    $('a').click(function(e) {
+        if (this.hash !== "") {
+            e.preventDefault();
+
+
+            var hash = this.hash
+
+            $('html, body').animate({ scrollTop: $(hash).offset().top }, 800,
+                function() {
+                    window.location.hash = hash;
+                });
+        }
+    });
 });
 
 $(document).scroll(function() {
@@ -57,4 +70,9 @@ $(document).on('click', '#char-info-close', function(e) {
     e.stopPropagation();
     e.preventDefault();
     $('#char-infobox').addClass('hide-me');
+})
+
+$(document).dblclick(function(e) {
+    e.preventDefault();
+    $('nav').toggleClass('hide-me');
 })
