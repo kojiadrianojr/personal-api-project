@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Orbitron|Press+Start+2P|Special+Elite&display=swap');
+.cursive {
+    font-family: 'Bungee Inline', cursive;
+}
+
+.dancing {
+    font-family: 'Dancing Script', cursive;
+}
+
+.microma {
+    font-family: 'Michroma', sans-serif;
+}
+
+.ubuntu {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.special-elite {
+    font-family: 'Special Elite', cursive;
+}
+
+.allerta {
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+.pixel {
+    font-family: 'Press Start 2P', cursive;
+}

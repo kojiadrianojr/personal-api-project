@@ -6,6 +6,7 @@
 
     <link id="thisLink" rel="icon" href="./images/icons/kisspng-morty-smith-rick-sanchez-drawing-fan-art-cartoon-rick-and-morty-5ac220ac73e954.5876699115226717884748.png" type="images/gif" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link href="./css/fonts.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
     <link href="./css/animations.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,12 +20,11 @@
             <img src="https://www.firstcomicsnews.com/wp-content/uploads/2017/09/Rick-and-Morty-logo-600x257.png">
         </div>
         <div class="nav-options hide-me">
-            <ul>
+            <ul class="custom-border-nav">
                 <li><a href="#top">Home</a></li>
                 <li><a href="#char">Characters</a></li>
                 <li><a href="#epi">Episodes</a></li>
                 <li><a href="#loc">Location</a></li>
-
             </ul>
             <div class="search-group">
                 <div class="input-group">
@@ -43,10 +43,11 @@
     <div id="first-cont" class="parallax-window container">
         <div id="char-infobox" class="hide-me">
             <div id="char-info-area">
-                <button id="char-info-close"><i class="fa fa-window-close" aria-hidden="true"></i></button>
-                <div id="info-here"></div>
+                <button id="char-info-close"><i class="fa fa-times-circle"></i></button>
+                <div id="info-here" class="allerta"></div>
             </div>
         </div>
+
         <div class="grid-container">
             <div class="left">
                 <p class="cursive"> November 2019</p>
@@ -55,7 +56,7 @@
                 </video>
             </div>
             <div class="right">
-                <p class="cursive">Rick and Morty <br> Characters</p>
+                <button id="more-char"><i class="cursive">Random Character</i></button>
                 <div class="right-char-cont">
                 </div>
             </div>
@@ -64,7 +65,26 @@
 
 
     <a name="char">
-        <div id="characters" class="parallax-window-2 container"></div>
+        <div id="characters" class="container">
+            <div class="char-filter">
+                <label class="ubuntu" for="filter-loc">Location: </label>
+                <select class="filter-loc pixel">
+                    <option>
+                       LOCATIONS
+                    </option>
+                </select>
+                <label class="ubuntu" for="filter-epi ">Episodes: </label>
+                <select class="filter-epi pixel">
+                        <option>
+                           EPISODES
+                        </option>
+                </select>
+            </div>
+            <div class="char-search">
+                <h1>Find: </h1>
+            </div>
+            <div class="char-cont"></div>
+        </div>
     </a>
 
     <a name="epi">
@@ -83,9 +103,9 @@
     <script src="./js/quotesApi.js"></script>
     <script src="./js/api.js"></script>
     <script src="./js/characters.js"></script>
-    <script src="./js/design.js"></script>
     <script src="./js/location.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/design.js"></script>
 </body>
 
 </html>

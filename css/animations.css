@@ -90,3 +90,16 @@ input[type="submit"]:focus {
 .animate-ss {
     transition: opacity 2s, margin 1s;
 }
+
+.hide-me {
+    display: none;
+}
+
+.hide-by-op {
+    opacity: 0;
+    margin-right: 500px;
+}
+
+.hide-by-fly {
+    margin-top: 50px;
+}

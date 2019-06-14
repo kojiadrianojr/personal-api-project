@@ -23,22 +23,28 @@ $(document).ready(function() {
     })
 
     $('.parallax-window').parallax({ imageSrc: '../images/wallpapers/751400.png' });
-    $('.parallax-window-2').parallax({
-        imageSrc: '../images/wallpapers/401073.jpg',
-        positionY: 'top',
-
+    $('#characters').parallax({
+        imageSrc: '../images/wallpapers/rick-and-morty-5k-fan-art-by.jpg',
     });
+    $('#episodes').parallax({
+        imageSrc: '../images/wallpapers/rick-and-morty-4k-zp.jpg',
+    });
+    $('#location').parallax({
+        imageSrc: '../images/wallpapers/rick-and-morty-hd-jh.jpg',
+    })
 
 });
 
 $(document).scroll(function() {
     var $nav = $('nav');
     var $navA = $('.nav-options ul li a');
+    var $navUL = $('.nav-options ul');
     var $i = $('.input-group i');
 
     $nav.toggleClass('bg-green', $(this).scrollTop() > $nav.height());
     $i.toggleClass('scrolledUL', $(this).scrollTop() > $nav.height());
     $navA.toggleClass('scrolledUL', $(this).scrollTop() > $nav.height());
+    $navUL.toggleClass('custom-border-nav', $(this).scrollTop() > $nav.height());
 })
 
 $(document).on('click', '#char-info', function(e) {
