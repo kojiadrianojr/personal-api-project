@@ -1,6 +1,6 @@
 const apis = {
     characters,
-    location,
+    locations,
     episode,
     quotes,
 };
@@ -45,28 +45,29 @@ $(document).ready(function() {
 
         })
     })
+
     $('#sel-episode').change(function() {
-            let episodes = $('#sel-episode').val()
-            var data = [];
-            episode.get(episodes)
-                .then(epi => {
-                    data.push(...epi.results)
-                    return data
-                })
-                .then(res => data[0].characters)
-                .then(char => {
-                    $('.char-box').html(char.map(url => {
-                        return renderChar(url)
-                            .then(char => {
-                                img = char.image;
-                                name = char.name;
-                                status = char.status;
-                                species = char.species;
-                                type = char.type;
-                                origin = char.origin.name;
-                                $('.char-box').append(`
+        let episodes = $('#sel-episode').val()
+        var data = [];
+        episode.get(episodes)
+            .then(epi => {
+                data.push(...epi.results)
+                return data
+            })
+            .then(res => data[0].characters)
+            .then(char => {
+                $('.char-box').html(char.map(url => {
+                    return renderChar(url)
+                        .then(char => {
+                            img = char.image;
+                            name = char.name;
+                            status = char.status;
+                            species = char.species;
+                            type = char.type;
+                            origin = char.origin.name;
+                            $('.char-box').append(`
                                 <div class="char-mini">
-                                <img src="${img}">
+                                    <img src="${img}">
                                 <h3>Information</h3>
                                 <p>
                                 Name: ${name} <br>
@@ -77,15 +78,59 @@ $(document).ready(function() {
                                 </p>
                             </div>
                                 `)
-                            })
-                    }))
-                })
+                        })
+                }))
+            });
+    });
 
-
-
-
+    const disLoc = (() => {
+        var locSel = $('#sel-loc');
+        locMaxPage.then(res => {
+            for (var i = 1; i <= res; i++) {
+                locations.getPage(i)
+                    .then(loc => loc.results)
+                    .then(res => {
+                        res.map(info => {
+                            $('#sel-loc').append(`
+                            <option value="${info.name}">${info.name}</option>`)
+                        })
+                    })
+            }
         })
-        //.trigger('change')
+    })();
+
+    $('#sel-loc').change(function() {
+        let location = $('#sel-loc').val();
+        locations.get(location)
+            .then(arr => arr.results)
+            .then(res => {
+                $('.char-box').html(res[0].residents.map(url => {
+                    return renderChar(url)
+                        .then(char => {
+                            console.log(char == null)
+
+                            img = char.image;
+                            name = char.name;
+                            status = char.status;
+                            species = char.species;
+                            type = char.type;
+                            origin = char.origin.name;
+                            $('.char-box').append(`
+                            <div class="char-mini">
+                                <img src="${img}">
+                                <h3>Information</h3>
+                                <span>Name: ${name} </span>
+                                <span>Status: ${status}  </span> 
+                                <span>Species: ${species}</span> 
+                                <span>Type: ${type} </span> 
+                                <span>Origin: ${origin} </span>
+                            </div>
+                                `)
+                        })
+                }))
+            })
+
+    });
 
 });
 
@@ -128,35 +173,22 @@ const maxPage = (() => {
         .then(info => info.pages)
 })();
 
+const locMaxPage = (() => {
+    return locations.getInfo()
+        .then(res => res)
+        .then(arr => arr.info)
+        .then(info => info.pages)
+})();
+
 
 
 const renderChar = (url) => {
-        return fetch(url)
-            .then(res => res.json())
-    }
-    /*
-    const displayAll = (() => {
-        characters.getPageTotal()
-            .then(count => {
-                for (i = 1; i <= count; i++) {
-                    characters.getPage(i)
-                        .then(page => page.results)
-                        .then(res => res.map(char => {
-                            $('.char-here').append(`
-                            <div class="char-box">
-                                <h1>${char.name}</h1>
-                            </div>
-                                `)
-                        }))
-                }
-            })
-    })();
-
-    */
+    return fetch(url)
+        .then(res => res.json())
+}
 
 
 /*
-
 quotes.get().then(res => {
     $('.left').append(`
         <p class="dancing">"${res.data}"</p>

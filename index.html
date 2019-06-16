@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
     <nav>
         <div class="logo hvr-pulse-shrink">
             <img src="https://www.firstcomicsnews.com/wp-content/uploads/2017/09/Rick-and-Morty-logo-600x257.png">
@@ -23,22 +24,10 @@
             <ul class="custom-border-nav">
                 <li><a href="#first-cont">Home</a></li>
                 <li><a href="#characters">Characters</a></li>
-                <li><a href="#episodes">Episodes</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><button class="playSound"><a href="#evil-morty">Hey Rick, </a></button></li>
             </ul>
-            <div class="search-group">
-                <div class="input-group">
-                    <i class="fa fa-search"></i>
-                </div>
-            </div>
         </div>
     </nav>
-    <div id="wrap" class="hide-by-op animate-ss">
-        <form action="" autocomplete="on">
-            <input id="search" name="search" type="text" placeholder="What are you finding?" autocomplete="off">
-            <input id="search_submit" type="submit">
-        </form>
-    </div>
 
     <div id="first-cont" class="parallax-window container">
         <div id="char-infobox" class="hide-me">
@@ -62,48 +51,28 @@
             </div>
         </div>
     </div>
-
-
-
     <div id="characters" class="container">
-        <div class="char-cont ">
+        <div class="char-cont">
             <div class="char-filter">
                 <label class="pixel" for="sel-season">Season </label>
-                <select id="sel-season" class=""></select>
+                <select id="sel-season" class="selec-d microma"></select>
                 <label class="pixel" for="sel-episode">Episode </label>
-                <select id="sel-episode" class=""></select>
+                <select id="sel-episode" class="selec-d microma"></select>
                 <hr>
                 <label class="pixel" for="sel-loc">or by Location </label>
-                <select id="sel-loc" class="">
-                    <option>Location 1</option>
+                <select id="sel-loc" class="selec-d microma">
+                    <option>Select Location</option>
                 </select>
             </div>
-            <div class="char-search"></div>
             <div class="char-disp-area">
                 <div class="char-here">
-                    <!--  
-                        <div class="curr-char-box">
-                        <button>Prev</button>
-                        <div class="char-main">
-                            <p>IMAGE <br> NAME</p>
-                        </div>
-                        <button>Next</button>
-                    </div>
-                -->
                     <div class="char-box">
-                        <div class="here"></div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    <div id="episodes" class="container"></div>
-    <div id="location" class="container"></div>
-
-
     <!--SCRIP -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

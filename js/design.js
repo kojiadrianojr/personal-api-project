@@ -24,28 +24,27 @@ $(document).ready(function() {
 
     $('.parallax-window').parallax({ imageSrc: '../images/wallpapers/751400.png' });
     $('#characters').parallax({
-        imageSrc: '../images/wallpapers/rick-and-morty-5k-fan-art-by.jpg',
+        imageSrc: '../images/wallpapers/wp2065394--rick-and-morty-wallpapers.png',
+
+
     });
-    $('#episodes').parallax({
-        imageSrc: '../images/wallpapers/rick-and-morty-4k-zp.jpg',
-    });
-    $('#location').parallax({
-        imageSrc: '../images/wallpapers/rick-and-morty-hd-jh.jpg',
+    $('#evil-morty').parallax({
+        imageSrc: '../images/wallpapers/wp3277729-rick-and-morty-4k-wallpapers.jpg',
+
     })
 
     $('a').click(function(e) {
         if (this.hash !== "") {
             e.preventDefault();
-
-
             var hash = this.hash
-
             $('html, body').animate({ scrollTop: $(hash).offset().top }, 800,
                 function() {
                     window.location.hash = hash;
                 });
         }
     });
+
+
 });
 
 $(document).scroll(function() {
@@ -76,3 +75,21 @@ $(document).dblclick(function(e) {
     e.preventDefault();
     $('nav').toggleClass('hide-me');
 })
+
+$(document).ready(function() {
+    var obj = document.createElement("audio");
+    obj.src = "../images/sound/Rick and Morty Soundtrack - Evil Mortys Theme (Quality Extended) [For the Damaged Coda].mp3";
+    obj.volume = 0.1;
+    obj.autoPlay = false;
+    obj.preLoad = true;
+    obj.controls = true;
+
+    $(".playSound").click(function() {
+        obj.play();
+        // obj.pause();
+    })
+
+    $(".playSound").dblclick(function() {
+        obj.pause();
+    })
+});
