@@ -16,7 +16,7 @@
 
 <body>
     <nav>
-        <div class="logo">
+        <div class="logo hvr-pulse-shrink">
             <img src="https://www.firstcomicsnews.com/wp-content/uploads/2017/09/Rick-and-Morty-logo-600x257.png">
         </div>
         <div class="nav-options hide-me">
@@ -43,20 +43,20 @@
     <div id="first-cont" class="parallax-window container">
         <div id="char-infobox" class="hide-me">
             <div id="char-info-area">
-                <button id="char-info-close"><i class="fa fa-times-circle"></i></button>
-                <div id="info-here" class="allerta"></div>
+                <button id="char-info-close" class="hvr-grow-shadow"><i class="fa fa-times-circle"></i></button>
+                <div id="info-here" class="allerta hvr-outline-in"></div>
             </div>
         </div>
 
         <div class="grid-container">
-            <div class="left">
+            <div class="left hvr-glow">
                 <p class="cursive"> November 2019</p>
                 <video controls>
                     <source src="./images/video/Rick and Morty Season 4 Release Date  Rick and Morty  Adult Swim.mp4">
                 </video>
             </div>
-            <div class="right">
-                <button id="more-char"><i class="cursive">Random Character</i></button>
+            <div class="right hvr-glow">
+                <button id="more-char" class="hvr-wobble-vertical"><i class="cursive">Random Character</i></button>
                 <div class="right-char-cont">
                 </div>
             </div>
@@ -66,11 +66,34 @@
 
 
     <div id="characters" class="container">
-        <div class="char-cont">
-            <div class="char-filter"></div>
+        <div class="char-cont ">
+            <div class="char-filter">
+                <label class="pixel" for="sel-season">Season </label>
+                <select id="sel-season" class=""></select>
+                <label class="pixel" for="sel-episode">Episode </label>
+                <select id="sel-episode" class=""></select>
+                <hr>
+                <label class="pixel" for="sel-loc">or by Location </label>
+                <select id="sel-loc" class="">
+                    <option>Location 1</option>
+                </select>
+            </div>
             <div class="char-search"></div>
             <div class="char-disp-area">
-                <div class="char-here"></div>
+                <div class="char-here">
+                    <!--  
+                        <div class="curr-char-box">
+                        <button>Prev</button>
+                        <div class="char-main">
+                            <p>IMAGE <br> NAME</p>
+                        </div>
+                        <button>Next</button>
+                    </div>
+                -->
+                    <div class="char-box">
+                        <div class="here"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -88,6 +111,7 @@
     <script src="./js/quotesApi.js"></script>
     <script src="./js/api.js"></script>
     <script src="./js/characters.js"></script>
+    <script src="./js/episode.js"></script>
     <script src="./js/location.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/design.js"></script>
