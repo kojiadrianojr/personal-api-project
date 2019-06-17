@@ -76,6 +76,12 @@ $(document).dblclick(function(e) {
     $('nav').toggleClass('hide-me');
 })
 
+$(document).on('click', '#evil-morts-close', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $('#evil-morts').addClass('hide-me')
+})
+
 $(document).ready(function() {
     var obj = document.createElement("audio");
     obj.src = "../images/sound/Rick and Morty Soundtrack - Evil Mortys Theme (Quality Extended) [For the Damaged Coda].mp3";
@@ -86,7 +92,7 @@ $(document).ready(function() {
 
     $(".playSound").click(function() {
         obj.play();
-        // obj.pause();
+        $('#evil-morts').toggleClass('hide-me');
     })
 
     $(".playSound").dblclick(function() {

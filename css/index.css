@@ -244,6 +244,33 @@ p#char-info {
     z-index: 1;
 }
 
+#evil-morts {
+    height: 120vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#evil-morts-area {
+    margin: 100px auto;
+    width: 35%;
+    height: 50%;
+    background-image: url(../images/wallpapers/wp3277729-rick-and-morty-4k-wallpapers.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+    justify-content: space-around;
+    align-items: center;
+    border: 0px solid #000000;
+    overflow: hidden;
+    box-shadow: 3px 4px 96px 8px rgba(0, 0, 0, 0.75);
+}
+
 #char-info-area {
     margin: 100px auto;
     width: 35%;
@@ -262,6 +289,11 @@ p#char-info {
     box-shadow: 3px 4px 96px 8px rgba(0, 0, 0, 0.75);
 }
 
+#evil a {
+    color: white;
+}
+
+#evil-morts-close,
 #char-info-close {
     color: white;
     border-radius: 50%;
@@ -388,9 +420,8 @@ p#char-info {
     width: 70%;
 }
 
-.select-d {
+.char-filter select {
     text-align: center;
-    background-color: red;
 }
 
 hr {
@@ -402,6 +433,12 @@ hr {
 .playSound {
     background-color: transparent;
     border: none;
+}
+
+.footer {
+    height: 5vh;
+    width: 100%;
+    background-color: #e4a788;
 }
 
 @media only screen and (max-device-width: 1440px) {

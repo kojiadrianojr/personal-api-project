@@ -24,7 +24,7 @@
             <ul class="custom-border-nav">
                 <li><a href="#first-cont">Home</a></li>
                 <li><a href="#characters">Characters</a></li>
-                <li><a class="playSound">Hey Rick</a></li>
+                <li><a class="playSound">...</a></li>
             </ul>
         </div>
     </nav>
@@ -34,6 +34,17 @@
             <div id="char-info-area">
                 <button id="char-info-close" class="hvr-grow-shadow"><i class="fa fa-times-circle"></i></button>
                 <div id="info-here" class="allerta hvr-outline-in"></div>
+            </div>
+        </div>
+
+        <div id="evil-morts" class="hide-me">
+            <div id="evil-morts-area">
+                <button id="evil-morts-close" class="hvr-grow-shadow"><i class="fa fa-times-circle"></i></button>
+                <div id="evil" class="allerta hvr-outline-in">
+                    <span>
+                        <a href="https://rickandmorty.fandom.com/wiki/Evil_Morty">It's been a long time Rick</a>
+                    </span>
+                </div>
             </div>
         </div>
 
@@ -55,12 +66,12 @@
         <div class="char-cont">
             <div class="char-filter">
                 <label class="pixel" for="sel-season">Season </label>
-                <select id="sel-season" class="selec-d microma"></select>
+                <select id="sel-season" class="microma"></select>
                 <label class="pixel" for="sel-episode">Episode </label>
-                <select id="sel-episode" class="selec-d microma"></select>
+                <select id="sel-episode" class="microma"></select>
                 <hr>
                 <label class="pixel" for="sel-loc">or by Location </label>
-                <select id="sel-loc" class="selec-d microma">
+                <select id="sel-loc" class="microma">
                     <option>Select Location</option>
                 </select>
             </div>
@@ -73,6 +84,9 @@
             </div>
         </div>
     </div>
+    <div class="footer">
+    </div>
+
     <!--SCRIP -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
