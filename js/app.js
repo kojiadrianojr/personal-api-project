@@ -24,9 +24,11 @@ $(document).ready(function() {
         maxPage.then(res => {
             for (i = 1; i <= res; i++) {
                 $seasonSelect.append(
-                    `
+                        `
                      <option value="${i}">Season: ${i}</option>
-                    `).trigger('change');
+                    `
+                    )
+                    //.trigger('change');
             }
         })
     })();
