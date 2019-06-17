@@ -95,7 +95,7 @@ $(document).ready(function() {
         $('#evil-morts').toggleClass('hide-me');
     })
 
-    $(".playSound").dblclick(function() {
+    $(".logo").click(function() {
         obj.pause();
     })
 });
